@@ -1,6 +1,17 @@
 # Instagram Copy
 
-## Instagram DB
+## 개요
+
+> Instagram을 토대로 데이터를 설계(ERD)해보고, 데이터베이스를 구축하여 Instagram의 각 화면을 구성하는 데이터를 Query문을 통해 가져오자.
+
+## 목적
+
+> 우리 눈에 보여지는 화면 속 데이터들의 이면에 감춰진 전반적인 DB 구축 및 조건에 맞는 데이터 Select 과정을 이해해보자.
+> 여기서 오는 고충과 고민을 이해해보자.
+> 효율적인 데이터 설계를 고민해보자.
+> MySQL의 Query문에 익숙해지자.
+
+## 데이터 설계 과정
 
 1. `AQueryTool`을 이용해 [**테이블 설계**](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20Table%20MySQL.txt)
 2. `Datagrip`으로 **테이블 생성 및 데이터 작성**
