@@ -39,4 +39,12 @@
   - [스토리](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%EC%8A%A4%ED%86%A0%EB%A6%AC%20%ED%99%94%EB%A9%B4.md#%EC%8A%A4%ED%86%A0%EB%A6%AC-%ED%99%94%EB%A9%B4)
   - [채팅 목록](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%EC%B1%84%ED%8C%85%EB%B0%A9%20%EB%AA%A9%EB%A1%9D%20%ED%99%94%EB%A9%B4.md#%EC%B1%84%ED%8C%85%EB%B0%A9-%EB%AA%A9%EB%A1%9D-%ED%99%94%EB%A9%B4)
 
+## 배운 점
+
+- 데이터 설계가 효율적으로 이루어지지 않으면 Query문을 작성할 때 복잡해질 수 있다.
+- 구현해야 할 기능을 먼저 생각한 뒤 그 조건에 따라 데이터 설계를 해야 효율적인 데이터 설계가 가능한 것 같다. 
+- 만약 데이터 개수가 기하급수적으로 많다면, 지금의 Query문보다 더 효율적인 Query문을 작성해야 할 것 같다.
+- 어떤 테이블을 이용하느냐에 따라 Query문 작성 난이도가 달라진다.
+- 평상시 무심코 사용했던 기능들이 그 데이터를 Select할 땐 여러 조건들을 꼼꼼하게 고려해서 나온 결과물임을 알게 되었다.
+
 ---
