@@ -22,7 +22,6 @@
 ![image](https://user-images.githubusercontent.com/43658658/134376655-2ea6621b-3273-4a72-bf37-d82c0b924a6f.png)
 
 4. `Query문`을 통한 **조건에 맞는 데이터 select**
-
   - [타임라인](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%ED%83%80%EC%9E%84%EB%9D%BC%EC%9D%B8.md#%ED%83%80%EC%9E%84%EB%9D%BC%EC%9D%B8-%ED%99%94%EB%A9%B4)
   - [활동 리스트](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%ED%99%9C%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md#%ED%99%9C%EB%8F%99-%EB%A6%AC%EC%8A%A4%ED%8A%B8)
   - [유저 프로필](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%ED%94%84%EB%A1%9C%ED%95%84%20%ED%99%94%EB%A9%B4.md#%ED%94%84%EB%A1%9C%ED%95%84-%ED%99%94%EB%A9%B4)
