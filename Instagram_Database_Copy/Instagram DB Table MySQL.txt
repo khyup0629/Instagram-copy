@@ -1,0 +1,175 @@
+﻿-- 테이블 순서는 관계를 고려하여 한 번에 실행해도 에러가 발생하지 않게 정렬되었습니다.
+
+-- ProfileTable Table Create SQL
+CREATE TABLE ProfileTable
+(
+    `userNo`              INT            NOT NULL    AUTO_INCREMENT COMMENT '유저 고유 번호',
+    `profileUserID`      VARCHAR(45)    NOT NULL,
+    `profileImageUrl`     TEXT           NULL,
+    `profileName`         VARCHAR(45)    NULL,
+    `profileGenre`        VARCHAR(45)    NULL,
+    `profileContent`      TEXT           NULL,
+    `profileLink`         TEXT           NULL,
+    `profileisDeleted`    CHAR(1)        NOT NULL    DEFAULT 'N' COMMENT 'N : 활성, Y : 탈퇴',
+    `profileActNow`       CHAR(1)        NOT NULL    DEFAULT 'N' COMMENT 'N : 활동X, Y : 활동중',
+    `profileLastActTime`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP COMMENT '마지막 활동 시간',
+    `profileCreatedAt`    TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `profileUpdatedAt`    TIMESTAMP      NULL        DEFAULT current_timestamp on update current_timestamp,
+     PRIMARY KEY (userNo)
+)default charset=utf8;
+
+
+-- FeedTable Table Create SQL
+CREATE TABLE FeedTable
+(
+    `feedNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '피드 고유 번호',
+    `feedHost`       VARCHAR(45)    NOT NULL    COMMENT '피드 올린 유저',
+    `feedContent`    TEXT           NULL        COMMENT '피드 본문 내용',
+    `feedCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (feedNo)
+)default charset=utf8;
+
+
+-- ClickLikeTable Table Create SQL
+CREATE TABLE ClickLikeTable
+(
+    `clickLikeNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '좋아요 고유 번호',
+    `clickLikeFeedNo`     INT            NOT NULL    COMMENT '가리키는 피드 번호',
+    `clickLikeUserID`     VARCHAR(45)    NOT NULL    COMMENT '좋아요 누른 사람',
+    `clickLikeCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (clickLikeNo)
+)default charset=utf8;
+
+
+-- ReplyTable Table Create SQL
+CREATE TABLE ReplyTable
+(
+    `replyNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '댓글 고유 번호',
+    `replyFeedNo`     INT            NOT NULL    COMMENT '가리키는 피드 번호',
+    `replyUserID`     VARCHAR(45)    NOT NULL    COMMENT '댓글 올린 사람',
+    `replyContent`    TINYTEXT       NOT NULL    COMMENT '댓글 내용',
+    `replyIsHeart`    CHAR(1)        NOT NULL    DEFAULT 'N' COMMENT 'N:하트없음, Y:하트있음',
+    `replyCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (replyNo)
+)default charset=utf8;
+
+
+-- FollowerTable Table Create SQL
+CREATE TABLE FollowerTable
+(
+    `followerNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '팔로워 순서',
+    `followerHost`       VARCHAR(45)    NOT NULL    COMMENT '호스트',
+    `followerUserID`     VARCHAR(45)    NOT NULL    COMMENT '호스트의 팔로워',
+    `followerCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (followerNo)
+)default charset=utf8;
+
+
+-- FeedImageTable Table Create SQL
+CREATE TABLE FeedImageTable
+(
+    `feedImageNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '이미지 고유 번호',
+    `feedImageFeedNo`     INT            NOT NULL    COMMENT '가리키는 피드 번호',
+    `feedImageUserID`     VARCHAR(45)    NOT NULL    COMMENT '이미지 올린 유저',
+    `feedImageUrl`        TEXT           NULL        COMMENT '이미지',
+    `feedImageCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (feedImageNo)
+)default charset=utf8;
+
+
+-- FeedVideoTable Table Create SQL
+CREATE TABLE FeedVideoTable
+(
+    `feedVideoNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '동영상 고유 번호',
+    `feedVideoFeedNo`     INT            NOT NULL    COMMENT '가리키는 피드 번호',
+    `feedVideoUserID`     VARCHAR(45)    NOT NULL    COMMENT '동영상 올린 유저',
+    `feedVideoUrl`        TEXT           NULL        COMMENT '동영상',
+    `feedVideoCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (feedVideoNo)
+)default charset=utf8;
+
+
+-- FollowingTable Table Create SQL
+CREATE TABLE FollowingTable
+(
+    `followingNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '팔로잉 순서',
+    `followingHost`       VARCHAR(45)    NOT NULL    COMMENT '호스트',
+    `followingUserID`     VARCHAR(45)    NOT NULL    COMMENT '호스트가 팔로잉',
+    `followingCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (followingNo)
+)default charset=utf8;
+
+
+-- StoryTable Table Create SQL
+CREATE TABLE StoryTable
+(
+    `storyNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '스토리 고유 번호',
+    `storyUserID`     VARCHAR(45)    NOT NULL    COMMENT '스토리 올린 유저',
+    `storyCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (storyNo)
+)default charset=utf8;
+
+
+-- StoryImageTable Table Create SQL
+CREATE TABLE StoryImageTable
+(
+    `storyImageNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '스토리 이미지 고유 번호',
+    `storyImageStoryNo`    INT            NOT NULL    COMMENT '가리키는 스토리 번호',
+    `storyImageUserID`     VARCHAR(45)    NOT NULL    COMMENT '스토리 이미지 올린 유저',
+    `storyImageUrl`        TEXT           NOT NULL    COMMENT '스토리 이미지',
+    `storyImageCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (storyImageNo)
+)default charset=utf8;
+
+
+-- StoryVideoTable Table Create SQL
+CREATE TABLE StoryVideoTable
+(
+    `storyVideoNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '스토리 동영상 고유 번호',
+    `storyVideoStoryNo`    INT            NOT NULL    COMMENT '가리키는 스토리',
+    `storyVideoUserID`     VARCHAR(45)    NOT NULL    COMMENT '스토리 동영상 올린 유저',
+    `storyVideoUrl`        TEXT           NOT NULL    COMMENT '스토리 동영상',
+    `storyVideoCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (storyVideoNo)
+)default charset=utf8;
+
+
+-- StoryWatchingTable Table Create SQL
+CREATE TABLE StoryWatchingTable
+(
+    `storyWatchingNo`         INT            NOT NULL    AUTO_INCREMENT COMMENT '스토리 시청 순서',
+    `storyWatchingStoryNo`    INT            NOT NULL    COMMENT '시청한 스토리',
+    `storyWatchingHost`       VARCHAR(45)    NOT NULL    COMMENT '호스트',
+    `storyWatchingUserID`     VARCHAR(45)    NOT NULL    COMMENT '호스트 스토리를 시청한 유저',
+    `storyWatchingCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (storyWatchingNo)
+)default charset=utf8;
+
+
+-- HighlightTable Table Create SQL
+CREATE TABLE HighlightTable
+(
+    `hlNo`              INT            NOT NULL    AUTO_INCREMENT COMMENT '하이라이트 순서',
+    `hlHost`            VARCHAR(45)    NOT NULL    COMMENT '하이라이트 올린 유저',
+    `hlCoverImageUrl`   TEXT           NOT NULL    COMMENT '하이라이트 커버 이미지',
+    `hlTitle`           VARCHAR(45)    NOT NULL    DEFAULT '하이라이트' COMMENT '하이라이트 제목',
+    `hlContentUrl`      TEXT           NOT NULL    COMMENT '하이라이트 이미지 or 영상',
+    `hlStoryCreatedAt`  TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (hlNo)
+)default charset=utf8;
+
+
+-- ChatTable Table Create SQL
+CREATE TABLE ChatTable
+(
+    `chatNo`            INT            NOT NULL    AUTO_INCREMENT COMMENT '메세지 순서',
+    `chatRoomUserName`  VARCHAR(45)    NOT NULL    COMMENT '방 이름(유저 이름)',
+    `chatTalker`        VARCHAR(45)    NOT NULL    COMMENT '메세지 보낸 사람',
+    `chatContent`       TEXT           NOT NULL    COMMENT '메세지 내용',
+    `chatType`          TEXT           NOT NULL    COMMENT '글자, Url',
+    `chatCheckTime`     TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP COMMENT '메세지 확인 시간',
+    `chatCreatedAt`     TIMESTAMP      NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (chatNo)
+)default charset=utf8;
+
+
