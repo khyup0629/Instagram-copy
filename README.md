@@ -11,7 +11,7 @@
 > 효율적인 데이터 설계를 고민해보자.   
 > MySQL의 Query문에 익숙해지자.
 
-## 데이터베이스 구축 과정
+## 데이터 설계 및 데이터베이스 구축 과정
 
 1. `AQueryTool`을 이용해 [**테이블 설계**](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20Table%20MySQL.txt)
 2. `Datagrip`으로 **테이블 생성 및 데이터 작성**
