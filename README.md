@@ -5,7 +5,6 @@
 1. `AQueryTool`을 이용해 [**테이블 설계**](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20Table%20MySQL.txt)
 2. `Datagrip`으로 **테이블 생성 및 데이터 작성**
 3. Instagram을 토대로 **각 화면에 띄워야 할 칼럼**을 `Excel`로 정리
-
   - 타임라인   
 ![image](https://user-images.githubusercontent.com/43658658/134375698-a4c946d9-8674-4e6b-bbdf-f15d75d9473f.png)
   - 활동 리스트   
@@ -20,7 +19,6 @@
 ![image](https://user-images.githubusercontent.com/43658658/134376586-a97c1c88-e148-4fd8-81b5-411847e0e56a.png)
   - 채팅 목록   
 ![image](https://user-images.githubusercontent.com/43658658/134376655-2ea6621b-3273-4a72-bf37-d82c0b924a6f.png)
-
 4. `Query문`을 통한 **조건에 맞는 데이터 select**
   - [타임라인](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%ED%83%80%EC%9E%84%EB%9D%BC%EC%9D%B8.md#%ED%83%80%EC%9E%84%EB%9D%BC%EC%9D%B8-%ED%99%94%EB%A9%B4)
   - [활동 리스트](https://github.com/khyup0629/Instagram-copy/blob/main/Instagram_Database_Copy/Instagram%20DB%20%ED%99%9C%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md#%ED%99%9C%EB%8F%99-%EB%A6%AC%EC%8A%A4%ED%8A%B8)
